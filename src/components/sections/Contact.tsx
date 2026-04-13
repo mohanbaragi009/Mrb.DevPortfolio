@@ -29,10 +29,6 @@ export const Contact: React.FC = () => {
             <h2 className="text-5xl md:text-6xl font-headline font-bold tracking-tight mb-8">
               Let's <span className="text-muted-foreground/40">Connect</span>
             </h2>
-            <div className="bg-primary/10 border border-primary/20 rounded-2xl p-4 flex items-center gap-3 text-xs font-bold text-primary tracking-widest uppercase">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              LIVE PREVIEW MODE
-            </div>
           </div>
 
           <p className="text-muted-foreground text-lg mb-16 leading-relaxed font-light">
