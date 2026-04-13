@@ -7,10 +7,10 @@
       "imageHint": "technology data"
     },
     {
-      "id": "hero-forest",
-      "description": "A serene forest scene as seen in the reference design",
-      "imageUrl": "https://picsum.photos/seed/forest/800/800",
-      "imageHint": "forest nature"
+      "id": "hero-classic-car",
+      "description": "A classic vintage car in a snowy architectural setting",
+      "imageUrl": "https://picsum.photos/seed/classic-car/800/800",
+      "imageHint": "vintage car"
     }
   ]
 }

@@ -1,16 +1,15 @@
-
 "use client";
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight, Github, Linkedin, Instagram, ExternalLink } from 'lucide-react';
+import { ChevronRight, Github, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { resumeData } from '@/lib/resume-data';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const Hero: React.FC = () => {
-  const forestImage = PlaceHolderImages.find(img => img.id === 'hero-forest');
+  const classicCarImage = PlaceHolderImages.find(img => img.id === 'hero-classic-car');
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 overflow-hidden">
@@ -74,12 +73,12 @@ export const Hero: React.FC = () => {
           <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full -z-10 animate-pulse" />
           <div className="relative h-full w-full rounded-[4rem] overflow-hidden border border-white/10 group">
             <Image
-              src={forestImage?.imageUrl || "https://picsum.photos/seed/forest/800/800"}
-              alt="Portrait of Mohan Baragi"
+              src={classicCarImage?.imageUrl || "https://picsum.photos/seed/classic-car/800/800"}
+              alt="Mohan Baragi Portfolio"
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-1000 grayscale-[0.2] contrast-[1.1]"
               priority
-              data-ai-hint="forest nature"
+              data-ai-hint="vintage car"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
