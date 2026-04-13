@@ -1,126 +1,122 @@
 export const resumeData = {
   basics: {
-    name: "Alex Continuum",
-    title: "Senior Product Designer & Full-Stack Engineer",
-    summary: "Visionary design-led engineer specializing in high-performance digital products. Expert at bridging the gap between complex technical infrastructure and world-class user experiences. Proven track record of scaling platforms for millions of users while maintaining pixel-perfect precision.",
-    location: "San Francisco, CA",
-    email: "hello@continuum.dev",
-    phone: "+1 (555) 000-0000",
+    name: "Mohan Baragi",
+    title: "Aspiring Software Engineer",
+    summary: "Aspiring Software engineer skilled in Python, Java, REST APIs, scalable systems, performance optimization. Passionate about building innovative solutions that leverage modern technologies like GenAI and full-stack development to solve real-world problems.",
+    location: "Bengaluru, Karnataka",
+    email: "mohanreddy00240@gmail.com",
+    phone: "+91-8296783608",
     links: [
-      "https://linkedin.com/in/alexcontinuum",
-      "https://github.com/alexcontinuum",
-      "https://continuum.dev"
+      "https://linkedin.com/in/mohan-baragi",
+      "https://github.com/mohanbaragi009",
+      "https://leetcode.com/mohanbaragi009"
     ]
   },
   experience: [
     {
-      company: "Quantum Systems",
-      role: "Lead Product Engineer",
-      dates: "2021 — Present",
-      location: "Remote",
+      company: "KodNest",
+      role: "Java Full Stack Developer Intern (Gen AI)",
+      dates: "Feb 2026 — Present",
+      location: "Bengaluru, Karnataka",
       bullets: [
-        "Architected a new Design System that reduced front-end development time by 45% across 12 product teams.",
-        "Led the migration of a legacy monolithic platform to a modern micro-frontend architecture using Next.js and Module Federation.",
-        "Increased core platform performance by 60% through aggressive caching strategies and bundle optimization.",
-        "Mentored a team of 8 engineers and designers, fostering a culture of cross-functional excellence."
-      ]
-    },
-    {
-      company: "Nova Interactive",
-      role: "Senior UX Engineer",
-      dates: "2018 — 2021",
-      location: "Austin, TX",
-      bullets: [
-        "Delivered a real-time collaborative workspace tool used by over 500k monthly active users.",
-        "Implemented advanced WebGL-based data visualizations for the platform's analytics dashboard.",
-        "Reduced churn rate by 15% through data-driven UI optimizations and A/B testing initiatives.",
-        "Collaborated closely with PMs to translate complex user requirements into elegant technical solutions."
-      ]
-    },
-    {
-      company: "Stellar Cloud",
-      role: "Full-Stack Developer",
-      dates: "2015 — 2018",
-      location: "Seattle, WA",
-      bullets: [
-        "Engineered secure API endpoints handling 10k requests per second using Node.js and Redis.",
-        "Integrated multi-cloud infrastructure monitoring tools using Go and Prometheus.",
-        "Redesigned the customer onboarding flow, increasing conversion rate from 22% to 38%."
+        "Optimized full-stack applications using Java, React, HTML, and CSS, resulting in improved system scalability.",
+        "Increased system efficiency by building RESTful APIs and optimizing MySQL queries, significantly enhancing overall performance.",
+        "Integrated Generative AI features and responsive UI components to improve user experience and platform functionality."
       ]
     }
   ],
   achievements: [
     {
-      measurableItem: "45% reduction",
-      context: "in front-end development time through a global Design System implementation."
+      measurableItem: "Quantum Hacks 2025",
+      context: "Participated in a national-level hackathon held in Bengaluru, demonstrating high-level problem solving under pressure."
     },
     {
-      measurableItem: "500k MAU",
-      context: "actively using a real-time collaboration tool built from the ground up."
+      measurableItem: "AWS Workshop",
+      context: "Gained practical cloud computing experience through workshops conducted by NxtWave."
     },
     {
-      measurableItem: "60% performance boost",
-      context: "achieved across core platform metrics via modern stack migration."
+      measurableItem: "OpenAI Buildathon",
+      context: "Participated in a State-Level Buildathon conducted by OpenAI X NxtWave."
     },
     {
-      measurableItem: "12 Product Teams",
-      context: "unified under a single UI language and technical standard."
+      measurableItem: "8.26 CGPA",
+      context: "Maintained a strong academic record at AMC Engineering College in Computer Science and Data Science."
     }
   ],
   projects: [
     {
-      title: "Nebula OS",
-      stack: "React, Three.js, TailwindCSS",
+      title: "AI Powered Resume Analyzer",
+      stack: "React JS, Node.js, Express.js, MongoDB, Google Gemini",
       bullets: [
-        "A futuristic, browser-based operating system shell exploring new desktop metaphors.",
-        "Features a custom window manager and interactive 3D desktop environments."
+        "Developed an AI-powered Full Stack application matching resumes using the Gemini API.",
+        "Implemented an ATS scoring algorithm to measure resume relevance and identify missing skills for candidates.",
+        "Generated AI-based improvement suggestions to enhance resume quality and job-match probability."
       ],
-      links: ["https://github.com/alexcontinuum/nebula-os"]
+      links: []
     },
     {
-      title: "Prism Dev Tools",
-      stack: "TypeScript, Rust, WASM",
+      title: "Vehicle-to-Vehicle Communication Using LoRa",
+      stack: "ESP32, LoRa Modules",
       bullets: [
-        "A collection of high-performance developer utilities for visual debugging.",
-        "Used by over 5,000 developers globally."
+        "Created a V2V communication system using ESP32 and LoRa modules for reliable long-range data transmission.",
+        "Enabled real-time exchange of vehicle data such as speed and proximity alerts to improve road safety.",
+        "Tested under simulated traffic scenarios, demonstrating increased situational awareness and collision prevention."
       ],
-      links: ["https://prism.dev"]
+      links: []
+    },
+    {
+      title: "Food Munch",
+      stack: "HTML, CSS, Bootstrap",
+      bullets: [
+        "Developed a fully responsive food ordering website offering a comprehensive list of items with detailed descriptions.",
+        "Enhanced user experience with structured HTML elements and modern Bootstrap components.",
+        "Implemented product videos for a better customer experience and engagement."
+      ],
+      links: []
     }
   ],
   skills: [
     {
-      category: "Engineering",
-      items: ["TypeScript", "Next.js", "React", "Node.js", "Rust", "Go", "PostgreSQL", "Redis", "AWS"]
+      category: "Programming",
+      items: ["Python", "JavaScript", "Java", "REST APIs"]
     },
     {
-      category: "Design",
-      items: ["Figma", "Design Systems", "Framer Motion", "Three.js", "Interaction Design", "Prototyping"]
+      category: "Frameworks & Databases",
+      items: ["React.js", "Node.js", "Express.js", "MongoDB", "MySQL"]
     },
     {
-      category: "Tools",
-      items: ["Git", "Docker", "Kubernetes", "CI/CD", "Vercel", "Storybook"]
+      category: "Others",
+      items: ["DSA", "OOPS", "DBMS", "Operating Systems", "Computer Networks", "Git", "GitHub", "UI/UX Design", "GenAI"]
     }
   ],
   education: [
     {
-      degree: "B.S. in Computer Science",
-      institution: "Stanford University",
-      dates: "2011 — 2015",
-      location: "Stanford, CA",
-      details: ["Specialization in Human-Computer Interaction", "GPA: 3.9/4.0"]
+      degree: "B.Tech in Computer Science Engineering and Data Science",
+      institution: "AMC Engineering College",
+      dates: "2022 — 2026",
+      location: "Bengaluru, Karnataka",
+      details: ["CGPA: 8.26"]
+    },
+    {
+      degree: "Pre-University Education (12th Grade)",
+      institution: "Sainikethan PU College",
+      dates: "2019 — 2021",
+      location: "Mudhol, Karnataka",
+      details: ["Percentage: 82.33%"]
     }
   ],
   certifications: [
-    "AWS Certified Solutions Architect",
-    "Google UX Design Professional Certificate"
+    "Introduction to Databases - NxtWave",
+    "Programming Foundations with Python - NxtWave"
   ],
   awards: [
-    "Red Dot Award: Communication Design (2022)",
-    "Product Hunt Golden Kitty Nominee (2021)"
+    "Quantum Hacks 2025 Participant",
+    "State-Level OpenAI Buildathon Participant"
   ],
   extra: [
-    "Active contributor to various Open Source projects including Next.js and Framer Motion.",
-    "Speaker at several international tech conferences on the topic of 'The Hybrid Engineer'."
+    "Skilled in problem solving, teamwork, adaptability, and time management.",
+    "Active on coding platforms like LeetCode and GitHub.",
+    "Passionate about scalable systems and performance optimization."
   ]
 };
 
