@@ -1,8 +1,9 @@
+
 export const resumeData = {
   basics: {
     name: "Mohan Baragi",
-    title: "Aspiring Software Engineer",
-    summary: "Aspiring Software engineer skilled in Python, Java, REST APIs, scalable systems, and performance optimization. Passionate about building innovative solutions in CSE-Data Science, leveraging GenAI and full-stack development to solve real-world problems.",
+    title: "Software & MERN Stack Developer",
+    summary: "Software and MERN Stack Developer specializing in Data Science. Eagerly waiting for the opportunity to learn and impact from day one. Hungry to learn new technologies and implement them in the real world with a simple and effective approach.",
     location: "Bengaluru, Karnataka",
     email: "mohanreddy00240@gmail.com",
     phone: "+91-8296783608",
@@ -89,7 +90,7 @@ export const resumeData = {
     },
     {
       title: "Wikipedia Search Application",
-      description: "Built a dynamic search engine leveraging the Wikipedia API for real-time information retrieval with custom UI filters.",
+      description: "Built a dynamic search engine leveraging the Wikipedia API for real-center information retrieval with custom UI filters.",
       stack: "HTML, CSS, JS",
       image: "https://picsum.photos/seed/wiki/800/600",
       isLive: true,

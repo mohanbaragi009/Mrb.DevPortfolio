@@ -64,8 +64,8 @@ export const Hero: React.FC = () => {
             transition={{ delay: 0.5 }}
             className="text-xl md:text-2xl text-muted-foreground/80 mb-14 max-w-xl leading-relaxed font-light"
           >
-            MERN Stack Developer specializing in <span className="text-white font-medium">Data Science</span>. <br />
-            Architecting high-performance digital systems with precision and aesthetic depth.
+            Software & MERN Stack Developer specializing in <span className="text-white font-medium">Data Science</span>. <br />
+            Eager to learn, impact, and implement new technologies in the real world from day one.
           </motion.p>
 
           <motion.div 
@@ -113,7 +113,7 @@ export const Hero: React.FC = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60" />
             
-            {/* Overlay Info Card - Refined Layout to fix text overlap */}
+            {/* Overlay Info Card */}
             <div className="absolute bottom-10 left-10 right-10 p-10 glass rounded-[3rem] translate-y-4 group-hover:translate-y-0 transition-all duration-700">
               <div className="flex flex-col gap-2">
                 <p className="text-[10px] font-bold tracking-[0.4em] text-primary uppercase">CURRENT FOCUS</p>
