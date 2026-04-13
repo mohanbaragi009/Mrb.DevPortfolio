@@ -9,7 +9,8 @@ export const resumeData = {
     links: [
       "https://linkedin.com/in/mohan-baragi",
       "https://github.com/mohanbaragi009",
-      "https://leetcode.com/mohanbaragi009"
+      "https://leetcode.com/mohanbaragi009",
+      "https://www.instagram.com/_mohanreddy_009/"
     ]
   },
   experience: [
@@ -52,7 +53,7 @@ export const resumeData = {
         "Implemented an ATS scoring algorithm to measure resume relevance and identify missing skills for candidates.",
         "Generated AI-based improvement suggestions to enhance resume quality and job-match probability."
       ],
-      links: []
+      links: ["https://github.com/mohanbaragi009"]
     },
     {
       title: "Vehicle-to-Vehicle Communication Using LoRa",
@@ -62,7 +63,7 @@ export const resumeData = {
         "Enabled real-time exchange of vehicle data such as speed and proximity alerts to improve road safety.",
         "Tested under simulated traffic scenarios, demonstrating increased situational awareness and collision prevention."
       ],
-      links: []
+      links: ["https://github.com/mohanbaragi009"]
     },
     {
       title: "Food Munch",
@@ -72,7 +73,7 @@ export const resumeData = {
         "Enhanced user experience with structured HTML elements and modern Bootstrap components.",
         "Implemented product videos for a better customer experience and engagement."
       ],
-      links: []
+      links: ["https://github.com/mohanbaragi009"]
     }
   ],
   skills: [
@@ -86,7 +87,7 @@ export const resumeData = {
     },
     {
       category: "Others",
-      items: ["DSA", "OOPS", "DBMS", "Operating Systems", "Computer Networks", "Git", "GitHub", "UI/UX Design", "GenAI"]
+      items: ["DSA", "OOPS", "DBMS", "Operating Systems", "Computer Networks", "Git", "GitHub", "HTML5", "CSS", "UI/UX Design", "GenAI", "Microsoft Visual Studio"]
     }
   ],
   education: [

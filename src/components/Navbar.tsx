@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { Menu, X, Download, Github, Linkedin } from 'lucide-react';
+import { Menu, X, Download, Github, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { resumeData } from '@/lib/resume-data';
@@ -45,7 +45,7 @@ export const Navbar: React.FC = () => {
             className="text-2xl font-headline font-bold tracking-tighter cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            AC<span className="text-primary">.</span>
+            MB<span className="text-primary">.</span>
           </motion.div>
 
           {/* Desktop Nav */}
@@ -65,6 +65,9 @@ export const Navbar: React.FC = () => {
               </a>
               <a href={resumeData.basics.links[0]} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 <Linkedin size={20} />
+              </a>
+              <a href={resumeData.basics.links[3]} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <Instagram size={20} />
               </a>
             </div>
           </nav>
@@ -103,6 +106,17 @@ export const Navbar: React.FC = () => {
               {link.name}
             </a>
           ))}
+          <div className="flex gap-6 mt-4">
+            <a href={resumeData.basics.links[1]} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Github size={24} />
+            </a>
+            <a href={resumeData.basics.links[0]} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Linkedin size={24} />
+            </a>
+            <a href={resumeData.basics.links[3]} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Instagram size={24} />
+            </a>
+          </div>
           <Button className="w-full mt-8" onClick={() => window.print()}>
             <Download size={18} className="mr-2" /> Download Resume
           </Button>
