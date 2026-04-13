@@ -19,15 +19,16 @@ const LeetCodeIcon = () => (
 export const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-32 px-6 max-w-7xl mx-auto">
-      <div className="bg-[#0a0a0a] rounded-[4rem] overflow-hidden border border-white/[0.05] shadow-2xl flex flex-col lg:flex-row min-h-[700px]">
-        {/* Left Panel: Info */}
-        <div className="lg:w-2/5 bg-[#111111] p-12 md:p-16 flex flex-col">
+      <div className="bg-[#050505] rounded-[4rem] overflow-hidden border border-white/[0.05] shadow-2xl flex flex-col lg:flex-row min-h-[800px]">
+        {/* Left Panel: Info (Dark) */}
+        <div className="lg:w-2/5 bg-[#0a0a0a] p-12 md:p-16 flex flex-col">
           <div className="mb-12">
             <Badge variant="outline" className="border-white/10 text-muted-foreground text-[10px] tracking-[0.2em] font-bold uppercase mb-8 py-1 px-4 rounded-full">
               GET IN TOUCH
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-headline font-bold tracking-tight mb-8">
-              Let's <span className="text-muted-foreground/40">Connect</span>
+            <h2 className="text-6xl md:text-7xl font-headline font-bold tracking-tight mb-8">
+              Let's <br />
+              <span className="text-muted-foreground/30">Connect</span>
             </h2>
           </div>
 
@@ -37,7 +38,7 @@ export const Contact: React.FC = () => {
 
           <div className="space-y-10 mb-20">
             <div className="flex items-center gap-6 group">
-              <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/5 flex items-center justify-center text-[#8b5cf6] group-hover:bg-[#8b5cf6] group-hover:text-white transition-all duration-500">
                 <Mail size={24} />
               </div>
               <div>
@@ -47,7 +48,7 @@ export const Contact: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-6 group">
-              <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/5 flex items-center justify-center text-[#8b5cf6] group-hover:bg-[#8b5cf6] group-hover:text-white transition-all duration-500">
                 <MapPin size={24} />
               </div>
               <div>
@@ -68,34 +69,36 @@ export const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Panel: Form */}
-        <div className="lg:w-3/5 p-12 md:p-16 flex flex-col justify-center">
+        {/* Right Panel: Form (Grey-White) */}
+        <div className="lg:w-3/5 bg-[#f8f9fa] p-12 md:p-16 flex flex-col justify-center text-zinc-950">
           <form className="space-y-10" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="space-y-4">
-                <label className="text-[10px] font-bold text-muted-foreground tracking-[0.2em] uppercase ml-1">FULL NAME</label>
-                <Input placeholder="Your Name" className="h-16 bg-white/[0.02] border-white/5 rounded-2xl px-6 focus:border-primary/50 transition-all placeholder:text-muted-foreground/20" />
+                <label className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">FULL NAME</label>
+                <Input placeholder="Your Name" className="h-16 bg-white border-zinc-200 text-zinc-900 rounded-2xl px-6 focus:border-[#8b5cf6]/50 transition-all placeholder:text-zinc-300" />
               </div>
               <div className="space-y-4">
-                <label className="text-[10px] font-bold text-muted-foreground tracking-[0.2em] uppercase ml-1">EMAIL PROTOCOL</label>
-                <Input type="email" placeholder="email@example.com" className="h-16 bg-white/[0.02] border-white/5 rounded-2xl px-6 focus:border-primary/50 transition-all placeholder:text-muted-foreground/20" />
+                <label className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">EMAIL PROTOCOL</label>
+                <Input type="email" placeholder="email@example.com" className="h-16 bg-white border-zinc-200 text-zinc-900 rounded-2xl px-6 focus:border-[#8b5cf6]/50 transition-all placeholder:text-zinc-300" />
               </div>
             </div>
 
             <div className="space-y-4">
-              <label className="text-[10px] font-bold text-muted-foreground tracking-[0.2em] uppercase ml-1">SUBJECT</label>
-              <Input placeholder="How can I help you?" className="h-16 bg-white/[0.02] border-white/5 rounded-2xl px-6 focus:border-primary/50 transition-all placeholder:text-muted-foreground/20" />
+              <label className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">SUBJECT</label>
+              <Input placeholder="How can I help you?" className="h-16 bg-white border-zinc-200 text-zinc-900 rounded-2xl px-6 focus:border-[#8b5cf6]/50 transition-all placeholder:text-zinc-300" />
             </div>
 
             <div className="space-y-4">
-              <label className="text-[10px] font-bold text-muted-foreground tracking-[0.2em] uppercase ml-1">YOUR MESSAGE</label>
-              <Textarea placeholder="Describe your project vision..." className="min-h-[200px] bg-white/[0.02] border-white/5 rounded-[2rem] p-6 focus:border-primary/50 transition-all resize-none placeholder:text-muted-foreground/20" />
+              <label className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">YOUR MESSAGE</label>
+              <Textarea placeholder="Describe your project vision..." className="min-h-[220px] bg-white border-zinc-200 text-zinc-900 rounded-[2rem] p-6 focus:border-[#8b5cf6]/50 transition-all resize-none placeholder:text-zinc-300" />
             </div>
 
-            <Button className="btn-gradient rounded-full h-20 px-12 text-sm font-bold tracking-[0.2em] group shadow-2xl shadow-primary/20 w-fit">
-              INITIATE CONTACT
-              <Send size={18} className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </Button>
+            <div className="pt-6">
+              <Button className="bg-[#8b5cf6] hover:bg-[#7c3aed] text-white rounded-full h-20 px-12 text-sm font-bold tracking-[0.2em] group shadow-[0_10px_40px_rgba(139,92,246,0.4)] w-fit">
+                INITIATE CONTACT
+                <Send size={18} className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              </Button>
+            </div>
           </form>
         </div>
       </div>
