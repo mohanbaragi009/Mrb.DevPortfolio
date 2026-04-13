@@ -1,0 +1,19 @@
+# **App Name**: Continuum Portfolio
+
+## Core Features:
+
+- Cinematic Intro & Hero Section: A captivating splash screen with an animated monogram and loading bar, transitioning smoothly to a hero section displaying the user's name, title, a high-impact summary, and primary/secondary call-to-action buttons for 'View Experience' and 'Download Resume'.
+- Dynamic Experience & Projects Display: Interactive timeline or stacked story cards for professional work experience and projects, featuring expand/collapse functionality with motion, and highlighted chips/badges for key metrics or results.
+- AI-Powered Impact Spotlight Tool: An intelligent client-side tool to automatically identify and visually highlight the most measurable achievements and key impacts from the user's resume content, presenting them in distinct badges and a 'Top 3 Impact' section to showcase expertise.
+- Visualized Achievements & Credentials: Showcase achievements in visually dominant trophy-like cards with optional animated counters (for numerical metrics), and present educational background and certifications in clear, structured sections.
+- Structured Skills & Information Hub: A dedicated, organized section detailing programming languages, frameworks, IT constructs, databases, and soft skills, along with an 'Additional Info' section to ensure all resume content is presented.
+- Resume Download & Share Utility: Provide a clear call to action and mechanism to download a well-formatted PDF or view a print-friendly page of the user's complete resume content extracted from the structured data.
+- Immersive Scroll-Based Interactivity: Implement smooth scroll reveal animations with staggered elements, parallax effects for section transitions, a sticky page progress indicator, subtle hover microinteractions (tilt, glow, border gradient), and seamless anchor scrolling, all while respecting prefers-reduced-motion settings.
+
+## Style Guidelines:
+
+- Default Theme: Dark mode with a sophisticated, futuristic palette. Primary interactive color: vibrant purple-magenta (#B37DE8), evocative of digital luminescence. Background color: deep, dark violet-grey (#1F1825), providing a clean, premium canvas. Accent color: energetic blue (#2121E8), used for highlights and interactive elements.
+- Headline font: 'Space Grotesk' (sans-serif), for a modern, techy, and clean appearance with strong visual hierarchy. Body text font: 'Inter' (sans-serif), for excellent readability and a neutral, objective feel across all content.
+- Utilize crisp, line-based icons from 'lucide-react' to maintain a minimalist, modern, and high-tech aesthetic throughout the interface.
+- Emphasize clear visual hierarchy through varied typography sizes (especially large hero text) and generous, crisp spacing. Key UI elements will incorporate glassmorphism effects and subtle glows for a futuristic depth. Card components will feature premium shadows, enhancing content separation and focus. A subtle grid or mesh background pattern will underlie the interface to reinforce the futuristic theme. A toggle for an optional light theme will be provided.
+- All animations are designed to be smooth, performant (target 60fps), and accessible, honoring `prefers-reduced-motion` settings. Key animations include: cinematic splash screen transitions, scroll reveals with staggered elements, subtle parallax on section transitions, and interactive hover effects (tilt, glow, border gradient shifts). A new dynamic background component will display a soft gradient mesh with drifting particles and faint connecting lines, always low contrast and non-distracting.
