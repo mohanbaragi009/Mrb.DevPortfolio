@@ -8,86 +8,81 @@ import { Badge } from '@/components/ui/badge';
 
 export const Education: React.FC = () => {
   return (
-    <section id="about" className="py-32 px-6 max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+    <section id="about" className="py-40 px-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-32">
         {/* Left Column: Academic Path */}
-        <div className="space-y-12">
-          <div className="space-y-4">
-            <Badge variant="secondary" className="bg-white/5 text-muted-foreground px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border-white/5">
+        <div className="space-y-20">
+          <div className="space-y-6">
+            <Badge variant="secondary" className="bg-white/[0.03] text-muted-foreground/60 px-5 py-2 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase border-white/[0.05]">
               JOURNEY
             </Badge>
-            <h2 className="text-6xl md:text-7xl font-headline font-bold tracking-tight">
+            <h2 className="text-7xl md:text-8xl font-headline font-bold tracking-tight leading-[0.9]">
               Academic <br />
-              <span className="text-white/30">Path</span>
+              <span className="text-white/10">Path</span>
             </h2>
           </div>
 
-          <div className="space-y-16">
-            {/* Degree Section */}
-            <div className="relative pl-12 space-y-4">
-              <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-primary">
-                <GraduationCap size={20} />
-              </div>
-              <div>
-                <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">2022 — 2026</span>
-                <h3 className="text-2xl font-headline font-bold mt-1">BE in Computer Science & Engineering</h3>
-                <p className="text-primary font-medium">Visvesvaraya Technological University (VTU)</p>
-                <p className="text-muted-foreground mt-4 leading-relaxed max-w-md text-sm">
-                  Specializing in Data Science. Focusing on machine learning algorithms, database management, and high-performance computing architectures.
-                </p>
-              </div>
-            </div>
-
-            {/* Ongoing/Experience Item */}
-            <div className="relative pl-12 space-y-4">
-              <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-primary">
-                <Briefcase size={20} />
-              </div>
-              <div>
-                <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">ONGOING</span>
-                <h3 className="text-2xl font-headline font-bold mt-1">MERN Stack Development</h3>
-                <p className="text-primary font-medium">Freelance & Individual Projects</p>
-                <p className="text-muted-foreground mt-4 leading-relaxed max-w-md text-sm">
-                  Developing scalable applications using the MERN stack. Implementing clean architectures and responsive user interfaces.
-                </p>
-              </div>
-            </div>
+          <div className="space-y-20">
+            {resumeData.education.map((edu, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.2 }}
+                className="relative pl-16 space-y-6 group"
+              >
+                <div className="absolute left-0 top-0 w-14 h-14 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-xl shadow-black/40">
+                  {idx === 0 ? <GraduationCap size={24} /> : <Briefcase size={24} />}
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold text-muted-foreground/60 uppercase tracking-[0.3em]">{edu.dates}</span>
+                  <h3 className="text-3xl font-headline font-bold mt-2 group-hover:text-primary transition-colors duration-300">{edu.degree}</h3>
+                  <p className="text-primary font-medium text-lg mt-1">{edu.institution}</p>
+                  <p className="text-muted-foreground/70 mt-6 leading-relaxed max-w-lg text-lg font-light">
+                    {edu.details.join('. ')}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
         {/* Right Column: Certifications */}
-        <div className="space-y-12">
-          <div className="space-y-4">
-            <Badge variant="secondary" className="bg-white/5 text-muted-foreground px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border-white/5">
+        <div className="space-y-20">
+          <div className="space-y-6">
+            <Badge variant="secondary" className="bg-white/[0.03] text-muted-foreground/60 px-5 py-2 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase border-white/[0.05]">
               CREDENTIALS
             </Badge>
-            <h2 className="text-6xl md:text-7xl font-headline font-bold tracking-tight">
-              Certifi<span className="text-white/30">cations</span>
+            <h2 className="text-7xl md:text-8xl font-headline font-bold tracking-tight leading-[0.9]">
+              Certifi<span className="text-white/10">cations</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 gap-6">
             {resumeData.certifications.map((cert, idx) => (
               <motion.a
                 key={idx}
                 href={typeof cert === 'string' ? '#' : cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="group flex items-center justify-between p-6 bg-white/5 border border-white/5 rounded-2xl hover:border-primary/50 transition-all duration-300"
+                className="group flex items-center justify-between p-8 glass rounded-[2.5rem] hover:border-primary/50 hover:bg-white/[0.05] transition-all duration-500"
               >
-                <div className="flex items-center gap-6">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                    <Award size={20} />
+                <div className="flex items-center gap-8">
+                  <div className="w-14 h-14 rounded-2xl bg-white/[0.03] flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-500">
+                    <Award size={24} />
                   </div>
-                  <span className="text-sm font-bold tracking-wide">
+                  <span className="text-lg font-bold tracking-tight">
                     {typeof cert === 'string' ? cert : cert.name}
                   </span>
                 </div>
-                <ExternalLink size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                <div className="w-12 h-12 rounded-full bg-white/[0.02] flex items-center justify-center group-hover:bg-primary transition-all duration-500">
+                  <ExternalLink size={20} className="text-muted-foreground group-hover:text-white transition-colors" />
+                </div>
               </motion.a>
             ))}
           </div>

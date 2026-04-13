@@ -27,40 +27,42 @@ export const Navbar: React.FC = () => {
     <>
       <header
         className={cn(
-          "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-7xl",
-          "px-8 py-4 rounded-[2.5rem] border border-white/5",
-          "bg-[#111111]/80 backdrop-blur-md shadow-2xl"
+          "fixed top-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-7xl",
+          "px-8 py-5 rounded-[3rem] border border-white/[0.05]",
+          "bg-[#0a0a0a]/70 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]",
+          isScrolled ? "top-4 py-4" : "top-8"
         )}
       >
         <div className="flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-headline font-bold tracking-tighter cursor-pointer flex items-center"
+            className="text-2xl font-headline font-bold tracking-tighter cursor-pointer flex items-center group"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            Mohan<span className="text-primary">.</span>
+            Mohan<span className="text-primary group-hover:animate-pulse">.</span>
           </motion.div>
 
-          <nav className="hidden md:flex items-center gap-12">
+          <nav className="hidden md:flex items-center gap-16">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-[10px] font-bold tracking-[0.2em] text-muted-foreground hover:text-white transition-colors"
+                className="text-[10px] font-bold tracking-[0.3em] text-muted-foreground hover:text-white transition-all duration-300 relative group"
               >
                 {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </nav>
 
           <div className="hidden md:block">
-            <Button className="btn-gradient rounded-full px-8 py-6 font-bold tracking-wide text-xs">
+            <Button className="btn-gradient rounded-full px-10 py-7 font-bold tracking-widest text-[10px] uppercase">
               Let's Talk
             </Button>
           </div>
 
-          <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden text-white p-2" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -69,22 +71,22 @@ export const Navbar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            className="fixed inset-0 z-40 md:hidden bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-8 gap-8"
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            className="fixed inset-0 z-40 md:hidden bg-black/95 flex flex-col items-center justify-center p-8 gap-10"
           >
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-3xl font-headline font-bold tracking-widest hover:text-primary transition-colors"
+                className="text-4xl font-headline font-bold tracking-widest hover:text-primary transition-all duration-300"
               >
                 {link.name}
               </a>
             ))}
-            <Button className="btn-gradient rounded-full px-12 py-8 text-xl font-bold w-full max-w-xs mt-4" onClick={() => setIsOpen(false)}>
+            <Button className="btn-gradient rounded-full px-12 py-9 text-xl font-bold w-full max-w-xs mt-6" onClick={() => setIsOpen(false)}>
               Let's Talk
             </Button>
           </motion.div>
