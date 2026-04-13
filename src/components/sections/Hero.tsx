@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -7,6 +8,12 @@ import { Button } from '@/components/ui/button';
 import { resumeData } from '@/lib/resume-data';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const LeetCodeIcon = () => (
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+    <path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-4.377 4.344a1.359 1.359 0 0 0-.415.958c0 .376.15.714.4 1.003l1.813 1.81a1.37 1.37 0 0 0 1.972 0c.563-.56.563-1.471 0-2.028l-2.677-2.673L12.65.439C12.873.22 13.16.111 13.483.111c.352 0 .662.141.9.397L20.897 7.02c.44.458.44 1.191 0 1.648l-6.33 6.328c-.458.441-1.212.441-1.67 0l-1.26-1.259a1.336 1.336 0 0 0-1.886 0c-.515.515-.515 1.353 0 1.868l1.26 1.26a3.99 3.99 0 0 0 5.648 0l6.33-6.329c1.556-1.556 1.556-4.084 0-5.64L14.39.366c-.226-.235-.55-.366-.908-.366zm-9.152 7.358c-.356 0-.687.143-.93.415L.397 10.77c-.528.528-.528 1.385 0 1.913l6.33 6.329c.456.457 1.21.457 1.668 0l1.26-1.26c.518-.518.518-1.356 0-1.874a1.326 1.326 0 0 0-1.884 0l-1.26 1.26-6.33-6.328 3.003-3.003 2.678 2.673c.515.515 1.353.515 1.868 0 .515-.515.515-1.353 0-1.868L6.442 8.358a1.343 1.343 0 0 0-.96-.414z" />
+  </svg>
+);
 
 export const Hero: React.FC = () => {
   const classicCarImage = PlaceHolderImages.find(img => img.id === 'hero-classic-car');
@@ -78,9 +85,10 @@ export const Hero: React.FC = () => {
               </a>
             </Button>
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center gap-4">
               <SocialIcon href="https://github.com/mohanbaragi009" icon={<Github size={22} />} />
               <SocialIcon href="https://linkedin.com/in/mohan-baragi" icon={<Linkedin size={22} />} />
+              <SocialIcon href="https://leetcode.com/mohanbaragi009" icon={<LeetCodeIcon />} />
               <SocialIcon href="https://www.instagram.com/_mohanreddy_009/" icon={<Instagram size={22} />} />
             </div>
           </motion.div>

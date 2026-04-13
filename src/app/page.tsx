@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from 'react';
@@ -12,6 +13,7 @@ import { Achievements } from '@/components/sections/Achievements';
 import { Projects } from '@/components/sections/Projects';
 import { Skills } from '@/components/sections/Skills';
 import { Education } from '@/components/sections/Education';
+import { Contact } from '@/components/sections/Contact';
 import { motion, AnimatePresence } from 'framer-motion';
 import { resumeData } from '@/lib/resume-data';
 
@@ -45,6 +47,7 @@ export default function Home() {
             <Projects />
             <Skills />
             <Education />
+            <Contact />
 
             <footer className="py-20 px-6 text-center border-t border-white/5 bg-background/50 backdrop-blur-sm">
               <div className="max-w-7xl mx-auto flex flex-col items-center">
