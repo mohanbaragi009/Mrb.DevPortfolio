@@ -2,85 +2,94 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, ShieldCheck, MoreHorizontal, ExternalLink } from 'lucide-react';
+import { GraduationCap, Briefcase, ExternalLink, Award } from 'lucide-react';
 import { resumeData } from '@/lib/resume-data';
+import { Badge } from '@/components/ui/badge';
 
 export const Education: React.FC = () => {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-        <div>
-          <h2 className="text-3xl font-headline font-bold mb-10 flex items-center gap-4">
-            <GraduationCap className="text-primary" />
-            Education
-          </h2>
-          <div className="space-y-12">
-            {resumeData.education.map((edu, idx) => (
-              <div key={idx} className="relative pl-8 border-l border-primary/20">
-                <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary" />
-                <h3 className="text-xl font-headline font-bold">{edu.degree}</h3>
-                <p className="text-primary font-medium">{edu.institution}</p>
-                <p className="text-sm text-muted-foreground mb-4">{edu.dates} | {edu.location}</p>
-                <ul className="space-y-2">
-                  {edu.details?.map((detail, dIdx) => (
-                    <li key={dIdx} className="text-sm text-muted-foreground">• {detail}</li>
-                  ))}
-                </ul>
+    <section id="about" className="py-32 px-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+        {/* Left Column: Academic Path */}
+        <div className="space-y-12">
+          <div className="space-y-4">
+            <Badge variant="secondary" className="bg-white/5 text-muted-foreground px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border-white/5">
+              JOURNEY
+            </Badge>
+            <h2 className="text-6xl md:text-7xl font-headline font-bold tracking-tight">
+              Academic <br />
+              <span className="text-white/30">Path</span>
+            </h2>
+          </div>
+
+          <div className="space-y-16">
+            {/* Degree Section */}
+            <div className="relative pl-12 space-y-4">
+              <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-primary">
+                <GraduationCap size={20} />
               </div>
-            ))}
+              <div>
+                <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">2022 — 2026</span>
+                <h3 className="text-2xl font-headline font-bold mt-1">BE in Computer Science & Engineering</h3>
+                <p className="text-primary font-medium">Visvesvaraya Technological University (VTU)</p>
+                <p className="text-muted-foreground mt-4 leading-relaxed max-w-md text-sm">
+                  Specializing in Data Science. Focusing on machine learning algorithms, database management, and high-performance computing architectures.
+                </p>
+              </div>
+            </div>
+
+            {/* Ongoing/Experience Item */}
+            <div className="relative pl-12 space-y-4">
+              <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-primary">
+                <Briefcase size={20} />
+              </div>
+              <div>
+                <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">ONGOING</span>
+                <h3 className="text-2xl font-headline font-bold mt-1">MERN Stack Development</h3>
+                <p className="text-primary font-medium">Freelance & Individual Projects</p>
+                <p className="text-muted-foreground mt-4 leading-relaxed max-w-md text-sm">
+                  Developing scalable applications using the MERN stack. Implementing clean architectures and responsive user interfaces.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
+        {/* Right Column: Certifications */}
         <div className="space-y-12">
-          <div>
-            <h2 className="text-3xl font-headline font-bold mb-8 flex items-center gap-4">
-              <ShieldCheck className="text-primary" />
-              Certifications
+          <div className="space-y-4">
+            <Badge variant="secondary" className="bg-white/5 text-muted-foreground px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase border-white/5">
+              CREDENTIALS
+            </Badge>
+            <h2 className="text-6xl md:text-7xl font-headline font-bold tracking-tight">
+              Certifi<span className="text-white/30">cations</span>
             </h2>
-            <div className="grid grid-cols-1 gap-3">
-              {resumeData.certifications.map((cert, idx) => (
-                <a 
-                  key={idx} 
-                  href={typeof cert === 'string' ? '#' : cert.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="glass group px-4 py-3 rounded-xl border-white/5 text-sm font-medium flex items-center justify-between hover:border-primary/50 transition-all"
-                >
-                  <span>{typeof cert === 'string' ? cert : cert.name}</span>
-                  <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
-                </a>
-              ))}
-            </div>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-headline font-bold mb-8 flex items-center gap-4">
-              <Award className="text-primary" />
-              Awards & Achievements
-            </h2>
-            <div className="flex flex-wrap gap-4">
-              {resumeData.awards.map((award, idx) => (
-                <div key={idx} className="glass px-4 py-3 rounded-xl border-white/5 text-sm font-medium flex items-center gap-2">
-                  <span className="text-primary">🏆</span>
-                  {award}
+          <div className="grid grid-cols-1 gap-4">
+            {resumeData.certifications.map((cert, idx) => (
+              <motion.a
+                key={idx}
+                href={typeof cert === 'string' ? '#' : cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.05 }}
+                className="group flex items-center justify-between p-6 bg-white/5 border border-white/5 rounded-2xl hover:border-primary/50 transition-all duration-300"
+              >
+                <div className="flex items-center gap-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                    <Award size={20} />
+                  </div>
+                  <span className="text-sm font-bold tracking-wide">
+                    {typeof cert === 'string' ? cert : cert.name}
+                  </span>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-3xl font-headline font-bold mb-8 flex items-center gap-4">
-              <MoreHorizontal className="text-primary" />
-              Additional
-            </h2>
-            <ul className="space-y-4">
-              {resumeData.extra.map((line, idx) => (
-                <li key={idx} className="text-sm text-muted-foreground leading-relaxed flex gap-3">
-                  <span className="text-primary shrink-0">•</span>
-                  {line}
-                </li>
-              ))}
-            </ul>
+                <ExternalLink size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
+              </motion.a>
+            ))}
           </div>
         </div>
       </div>
