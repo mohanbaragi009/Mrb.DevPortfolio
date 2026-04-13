@@ -32,11 +32,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply bg-[#080808] text-foreground font-body antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
     background-image: 
-      radial-gradient(at 0% 0%, hsla(263, 70%, 50%, 0.1) 0px, transparent 40%),
-      radial-gradient(at 100% 100%, hsla(280, 70%, 50%, 0.05) 0px, transparent 40%);
+      radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 40%);
     background-attachment: fixed;
   }
 }
@@ -44,9 +44,6 @@
 @layer utilities {
   .glass {
     @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
-  }
-  .glass-darker {
-    @apply bg-black/40 backdrop-blur-2xl border border-white/5 shadow-2xl;
   }
   .btn-gradient {
     @apply bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:opacity-90 transition-opacity;
