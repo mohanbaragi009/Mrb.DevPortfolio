@@ -1,3 +1,10 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-tech",
+      "description": "Abstract technology and data science visualization",
+      "imageUrl": "https://picsum.photos/seed/datascience/1200/800",
+      "imageHint": "technology data"
+    }
+  ]
 }
