@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, ShieldCheck, MoreHorizontal } from 'lucide-react';
+import { GraduationCap, Award, ShieldCheck, MoreHorizontal, ExternalLink } from 'lucide-react';
 import { resumeData } from '@/lib/resume-data';
 
 export const Education: React.FC = () => {
@@ -37,11 +37,18 @@ export const Education: React.FC = () => {
               <ShieldCheck className="text-primary" />
               Certifications
             </h2>
-            <div className="flex flex-wrap gap-4">
+            <div className="grid grid-cols-1 gap-3">
               {resumeData.certifications.map((cert, idx) => (
-                <div key={idx} className="glass px-4 py-3 rounded-xl border-white/5 text-sm font-medium">
-                  {cert}
-                </div>
+                <a 
+                  key={idx} 
+                  href={typeof cert === 'string' ? '#' : cert.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="glass group px-4 py-3 rounded-xl border-white/5 text-sm font-medium flex items-center justify-between hover:border-primary/50 transition-all"
+                >
+                  <span>{typeof cert === 'string' ? cert : cert.name}</span>
+                  <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+                </a>
               ))}
             </div>
           </div>
@@ -49,7 +56,7 @@ export const Education: React.FC = () => {
           <div>
             <h2 className="text-3xl font-headline font-bold mb-8 flex items-center gap-4">
               <Award className="text-primary" />
-              Awards
+              Awards & Achievements
             </h2>
             <div className="flex flex-wrap gap-4">
               {resumeData.awards.map((award, idx) => (

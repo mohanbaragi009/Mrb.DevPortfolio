@@ -4,47 +4,47 @@
 
 @layer base {
   :root {
-    --background: 270 20% 98%;
-    --foreground: 270 20% 10%;
-    --card: 270 20% 95%;
-    --card-foreground: 270 20% 10%;
-    --popover: 270 20% 98%;
-    --popover-foreground: 270 20% 10%;
-    --primary: 270 70% 70%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 270 70% 50%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 80% 52%;
+    --secondary: 0 0% 20%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 270 10% 90%;
-    --muted-foreground: 270 10% 40%;
-    --accent: 270 70% 70%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 270 70% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 270 10% 85%;
-    --input: 270 10% 85%;
-    --ring: 270 70% 70%;
-    --radius: 0.75rem;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 0%;
+    --radius: 0.5rem;
   }
   .dark {
-    --background: 270 21% 12%;
-    --foreground: 0 0% 98%;
-    --card: 270 21% 15%;
-    --card-foreground: 0 0% 98%;
-    --popover: 270 21% 12%;
-    --popover-foreground: 0 0% 98%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
     --primary: 270 71% 70%;
-    --primary-foreground: 270 21% 12%;
-    --secondary: 240 80% 52%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 270 15% 20%;
-    --muted-foreground: 270 10% 65%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
     --accent: 270 71% 70%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 270 15% 22%;
-    --input: 270 15% 22%;
-    --ring: 270 71% 70%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 100%;
   }
 }
 
@@ -60,7 +60,7 @@
 
 @layer utilities {
   .glass {
-    @apply bg-background/60 backdrop-blur-md border border-white/10;
+    @apply bg-background/60 backdrop-blur-md border border-white/5;
   }
   .text-glow {
     text-shadow: 0 0 10px hsl(var(--primary) / 0.5);

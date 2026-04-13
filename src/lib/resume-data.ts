@@ -2,7 +2,7 @@ export const resumeData = {
   basics: {
     name: "Mohan Baragi",
     title: "Aspiring Software Engineer",
-    summary: "Aspiring Software engineer skilled in Python, Java, REST APIs, scalable systems, performance optimization. Passionate about building innovative solutions that leverage modern technologies like GenAI and full-stack development to solve real-world problems.",
+    summary: "Aspiring Software engineer skilled in Python, Java, REST APIs, scalable systems, and performance optimization. Passionate about building innovative solutions in CSE-Data Science, leveraging GenAI and full-stack development to solve real-world problems.",
     location: "Bengaluru, Karnataka",
     email: "mohanreddy00240@gmail.com",
     phone: "+91-8296783608",
@@ -41,7 +41,7 @@ export const resumeData = {
     },
     {
       measurableItem: "8.26 CGPA",
-      context: "Maintained a strong academic record at AMC Engineering College in Computer Science and Data Science."
+      context: "Maintained a strong academic record at AMC Engineering College in CSE and Data Science."
     }
   ],
   projects: [
@@ -50,18 +50,48 @@ export const resumeData = {
       stack: "React JS, Node.js, Express.js, MongoDB, Google Gemini",
       bullets: [
         "Developed an AI-powered Full Stack application matching resumes using the Gemini API.",
-        "Implemented an ATS scoring algorithm to measure resume relevance and identify missing skills for candidates.",
+        "Implemented an ATS scoring algorithm to measure resume relevance and identify missing skills.",
         "Generated AI-based improvement suggestions to enhance resume quality and job-match probability."
       ],
       links: ["https://github.com/mohanbaragi009"]
     },
     {
-      title: "Vehicle-to-Vehicle Communication Using LoRa",
-      stack: "ESP32, LoRa Modules",
+      title: "Wikipedia Search Application",
+      stack: "HTML, CSS, JS, Wikipedia API",
       bullets: [
-        "Created a V2V communication system using ESP32 and LoRa modules for reliable long-range data transmission.",
-        "Enabled real-time exchange of vehicle data such as speed and proximity alerts to improve road safety.",
-        "Tested under simulated traffic scenarios, demonstrating increased situational awareness and collision prevention."
+        "Built a dynamic search engine leveraging the Wikipedia API for real-time information retrieval.",
+        "Implemented custom UI filters and responsive layout for seamless cross-device browsing.",
+        "Optimized API calling frequency to ensure smooth user experience and low latency."
+      ],
+      links: ["https://mohanbaragi009.github.io/Wikipedia-Search-App/"]
+    },
+    {
+      title: "mcp-learning-path-ChatBot",
+      stack: "Python, GenAI, LangChain, OpenAI API",
+      bullets: [
+        "Engineered an AI chatbot designed to generate personalized learning paths for students.",
+        "Utilized modern LLM orchestration frameworks to maintain context and intent throughout conversations.",
+        "Focused on data science and software engineering roadmap generation."
+      ],
+      links: ["https://github.com/mohanbaragi009"]
+    },
+    {
+      title: "Loan-Approval-Prediction-System",
+      stack: "Python, Flask, Scikit-learn, Machine Learning",
+      bullets: [
+        "Developed a web application for predicting loan approval status based on user input features.",
+        "Trained multiple ML models (Random Forest, Logistic Regression) to find the most accurate prediction engine.",
+        "Deployed the model using a Flask backend for real-time inference capability."
+      ],
+      links: ["https://github.com/mohanbaragi009"]
+    },
+    {
+      title: "BookMyShow Clone",
+      stack: "React, Node.js, MongoDB, Tailwind CSS",
+      bullets: [
+        "Architected a scalable movie booking platform with real-time seat selection and availability.",
+        "Integrated secure authentication and a mock payment gateway for a complete user journey.",
+        "Focused on high-performance image rendering and state management."
       ],
       links: ["https://github.com/mohanbaragi009"]
     },
@@ -71,9 +101,9 @@ export const resumeData = {
       bullets: [
         "Developed a fully responsive food ordering website offering a comprehensive list of items with detailed descriptions.",
         "Enhanced user experience with structured HTML elements and modern Bootstrap components.",
-        "Implemented product videos for a better customer experience and engagement."
+        "Implemented high-quality product displays and engagement features."
       ],
-      links: ["https://github.com/mohanbaragi009"]
+      links: ["https://mohanbaragi009.github.io/Food-munch/"]
     }
   ],
   skills: [
@@ -87,16 +117,16 @@ export const resumeData = {
     },
     {
       category: "Others",
-      items: ["DSA", "OOPS", "DBMS", "Operating Systems", "Computer Networks", "Git", "GitHub", "HTML5", "CSS", "UI/UX Design", "GenAI", "Microsoft Visual Studio"]
+      items: ["DSA", "OOPS", "DBMS", "Operating Systems", "Computer Networks", "Git", "GitHub", "HTML5", "CSS", "UI/UX Design", "GenAI", "Data Science"]
     }
   ],
   education: [
     {
-      degree: "B.Tech in Computer Science Engineering and Data Science",
+      degree: "B.Tech in CSE - DATA SCIENCE Specialization",
       institution: "AMC Engineering College",
       dates: "2022 — 2026",
       location: "Bengaluru, Karnataka",
-      details: ["CGPA: 8.26"]
+      details: ["CGPA: 8.26", "Specialization: Computer Science Engineering & Data Science"]
     },
     {
       degree: "Pre-University Education (12th Grade)",
@@ -107,8 +137,12 @@ export const resumeData = {
     }
   ],
   certifications: [
-    "Introduction to Databases - NxtWave",
-    "Programming Foundations with Python - NxtWave"
+    { name: "Programming Foundations with Python", link: "https://certificates.ccbp.in/academy/programming-foundations-with-python?id=WABDAHZAZY" },
+    { name: "Introduction to Databases", link: "https://certificates.ccbp.in/academy/introduction-to-databases?id=DTYSECLWBQ" },
+    { name: "Responsive Web Design using Flexbox", link: "https://certificates.ccbp.in/academy/responsive-web-design-using-flexbox?id=BHSAGAUDGC" },
+    { name: "Static Website", link: "https://certificates.ccbp.in/academy/static-website?id=WWBJVRTOHU" },
+    { name: "Dynamic Web Application", link: "https://certificates.ccbp.in/academy/dynamic-web-application?id=NTMSYLSJVS" },
+    { name: "Node JS", link: "https://certificates.ccbp.in/academy/node-js?id=PNBBCZVWFI" }
   ],
   awards: [
     "Quantum Hacks 2025 Participant",
