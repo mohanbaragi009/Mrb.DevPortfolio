@@ -53,7 +53,20 @@ export const resumeData = {
         "Implemented an ATS scoring algorithm to measure resume relevance and identify missing skills.",
         "Generated AI-based improvement suggestions to enhance resume quality and job-match probability."
       ],
-      links: ["https://github.com/mohanbaragi009"]
+      links: [
+        "https://github.com/mohanbaragi009",
+        "https://v0-mohan-ai-resume-analyzer.vercel.app/"
+      ]
+    },
+    {
+      title: "Golf Charity Subscription",
+      stack: "React, Tailwind CSS, Vercel, Node.js",
+      bullets: [
+        "Architected a subscription-based platform for golf charity events and community engagement.",
+        "Streamlined the registration and payment process for tournament participants.",
+        "Optimized frontend performance for a seamless user subscription journey."
+      ],
+      links: ["https://golf-charity-subscription-ten.vercel.app/"]
     },
     {
       title: "Wikipedia Search Application",
@@ -64,6 +77,16 @@ export const resumeData = {
         "Optimized API calling frequency to ensure smooth user experience and low latency."
       ],
       links: ["https://mohanbaragi009.github.io/Wikipedia-Search-App/"]
+    },
+    {
+      title: "Vehicle to Vehicle Communication (LoRa)",
+      stack: "LoRa, Arduino, ESP32, Embedded C++, Python",
+      bullets: [
+        "Implemented a low-power wide-area network (LPWAN) protocol for vehicle-to-vehicle data exchange.",
+        "Optimized transmission latency and reliability for safety-critical communications.",
+        "Developed a robust messaging system capable of long-range telemetry transmission."
+      ],
+      links: ["https://github.com/mohanbaragi009"]
     },
     {
       title: "mcp-learning-path-ChatBot",
