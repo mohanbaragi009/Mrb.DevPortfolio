@@ -113,10 +113,15 @@ export const Hero: React.FC = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60" />
             
-            {/* Overlay Info Card */}
-            <div className="absolute bottom-10 left-10 right-10 p-8 glass rounded-[2.5rem] translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
-              <p className="text-[10px] font-bold tracking-[0.3em] text-primary mb-2 uppercase">Current Focus</p>
-              <h4 className="text-xl font-headline font-bold">Generative AI Integration</h4>
+            {/* Overlay Info Card - Refined Layout to fix text overlap */}
+            <div className="absolute bottom-10 left-10 right-10 p-10 glass rounded-[3rem] translate-y-4 group-hover:translate-y-0 transition-all duration-700">
+              <div className="flex flex-col gap-2">
+                <p className="text-[10px] font-bold tracking-[0.4em] text-primary uppercase">CURRENT FOCUS</p>
+                <h4 className="text-2xl font-headline font-bold tracking-tight text-white leading-tight">
+                  Generative AI <br /> 
+                  <span className="text-white/60 font-light">Integration</span>
+                </h4>
+              </div>
             </div>
           </div>
         </motion.div>
