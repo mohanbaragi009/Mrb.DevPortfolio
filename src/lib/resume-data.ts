@@ -131,16 +131,24 @@ export const resumeData = {
   ],
   skills: [
     {
-      category: "Programming",
-      items: ["Python", "JavaScript", "Java", "REST APIs"]
+      category: "MERN Stack",
+      items: ["MongoDB", "Express.js", "React.js", "Node.js", "Next.js", "TypeScript"],
+      proficiency: 92
     },
     {
-      category: "Frameworks & Databases",
-      items: ["React.js", "Node.js", "Express.js", "MongoDB", "MySQL"]
+      category: "Frontend & UI",
+      items: ["Tailwind CSS", "Redux Toolkit", "Framer Motion", "ShadCN", "HTML5/CSS3"],
+      proficiency: 88
     },
     {
-      category: "Others",
-      items: ["DSA", "OOPS", "DBMS", "Operating Systems", "Computer Networks", "Git", "GitHub", "HTML5", "CSS", "UI/UX Design", "GenAI", "Data Science"]
+      category: "Core Programming",
+      items: ["JavaScript (ES6+)", "C++", "Java", "Python", "Problem Solving"],
+      proficiency: 85
+    },
+    {
+      category: "Backend & DevOps",
+      items: ["PostgreSQL", "Firebase", "JWT Auth", "REST APIs", "Docker", "Vercel"],
+      proficiency: 80
     }
   ],
   education: [
