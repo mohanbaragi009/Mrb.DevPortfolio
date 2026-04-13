@@ -57,6 +57,16 @@ export const resumeData = {
       ]
     },
     {
+      title: "AI Web App Builder Project",
+      description: "A sophisticated platform that leverages advanced LLMs to generate production-ready web applications from natural language prompts, featuring automated deployment and styling.",
+      stack: "Next.js, Genkit, Tailwind, Firebase",
+      image: "https://picsum.photos/seed/ai-builder/800/600",
+      isLive: true,
+      links: [
+        { type: "code", url: "https://github.com/mohanbaragi009" }
+      ]
+    },
+    {
       title: "Golf Charity Subscription",
       description: "Membership management platform for golf clubs featuring tiered subscriptions, secure payments, and charity tracking.",
       stack: "React, Node.js, Express",
@@ -86,16 +96,6 @@ export const resumeData = {
       links: [
         { type: "code", url: "https://mohanbaragi009.github.io/Wikipedia-Search-App/" },
         { type: "launch", url: "https://mohanbaragi009.github.io/Wikipedia-Search-App/" }
-      ]
-    },
-    {
-      title: "BookMyShow Clone",
-      description: "Scalable movie booking platform with real-time seat selection, secure auth, and high-performance state management.",
-      stack: "React, Node.js, MongoDB",
-      image: "https://picsum.photos/seed/movies/800/600",
-      isLive: true,
-      links: [
-        { type: "code", url: "https://github.com/mohanbaragi009" }
       ]
     },
     {

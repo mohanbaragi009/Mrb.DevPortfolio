@@ -11,6 +11,12 @@
       "description": "A classic vintage car in a snowy architectural setting",
       "imageUrl": "https://picsum.photos/seed/classic-car/800/800",
       "imageHint": "vintage car"
+    },
+    {
+      "id": "ai-builder",
+      "description": "Visual representation of AI web development",
+      "imageUrl": "https://picsum.photos/seed/ai-builder/800/600",
+      "imageHint": "ai software"
     }
   ]
 }
