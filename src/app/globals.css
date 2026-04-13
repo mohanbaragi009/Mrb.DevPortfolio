@@ -34,10 +34,6 @@
   body {
     @apply bg-[#050505] text-foreground font-body antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
-    background-image: 
-      radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.03) 0%, transparent 40%),
-      radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.03) 0%, transparent 40%);
-    background-attachment: fixed;
   }
 }
 
@@ -53,6 +49,9 @@
   }
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-white/20;
+  }
+  .outline-text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
   }
 }
 

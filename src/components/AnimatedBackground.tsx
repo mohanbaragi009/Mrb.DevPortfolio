@@ -4,13 +4,22 @@ import React from 'react';
 
 export const AnimatedBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none overflow-hidden">
+    <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none overflow-hidden bg-[#050505]">
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      
       {/* Texture Layer */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] pointer-events-none" />
+      <div className="absolute inset-0 opacity-[0.02] bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] pointer-events-none" />
       
       {/* Background Gradients */}
-      <div className="absolute top-0 left-[-10%] w-[50%] h-[50%] bg-primary/5 blur-[150px] rounded-full" />
-      <div className="absolute bottom-0 right-[-10%] w-[50%] h-[50%] bg-purple-500/5 blur-[150px] rounded-full" />
+      <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/10 blur-[180px] rounded-full animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-purple-500/10 blur-[180px] rounded-full animate-pulse" style={{ animationDuration: '12s' }} />
+      
+      {/* Central White Glow - "The White in Background" */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[40%] bg-white/[0.02] blur-[150px] rounded-full pointer-events-none" />
+      
+      {/* Subtle Bottom Light */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[20%] bg-gradient-to-t from-white/[0.03] to-transparent pointer-events-none" />
     </div>
   );
 };
