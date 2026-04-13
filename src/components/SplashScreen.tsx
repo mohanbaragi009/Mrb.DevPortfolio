@@ -36,7 +36,7 @@ export const SplashScreen: React.FC<{ onComplete: () => void }> = ({ onComplete 
           className="relative mb-8"
         >
           <div className="text-6xl font-headline font-bold text-primary tracking-tighter">
-            AC
+            MB
           </div>
           <motion.div
             initial={{ width: 0 }}
