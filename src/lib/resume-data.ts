@@ -25,6 +25,17 @@ export const resumeData = {
         "Increased system efficiency by building RESTful APIs and optimizing MySQL queries, significantly enhancing overall performance.",
         "Integrated Generative AI features and responsive UI components to improve user experience and platform functionality."
       ]
+    },
+    {
+      company: "NxtWave Technologies",
+      role: "Teaching Assistant",
+      dates: "Apr 2025 — Present",
+      location: "Hyderabad (Remote)",
+      bullets: [
+        "Gained practical knowledge of web development using HTML, CSS, and Bootstrap.",
+        "Assisted students by clarifying doubts and guiding them through coding challenges.",
+        "Understood and implemented both static and dynamic responsive websites."
+      ]
     }
   ],
   achievements: [
