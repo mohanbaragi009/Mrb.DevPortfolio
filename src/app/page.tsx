@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from 'react';
@@ -19,12 +20,15 @@ export default function Home() {
 
   return (
     <main className="relative">
-      <AnimatePresence>
-        {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
+      <AnimatePresence mode="wait">
+        {showSplash && (
+          <SplashScreen key="splash" onComplete={() => setShowSplash(false)} />
+        )}
       </AnimatePresence>
 
       {!showSplash && (
         <motion.div
+          key="content"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
