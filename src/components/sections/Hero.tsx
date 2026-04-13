@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -9,7 +10,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const Hero: React.FC = () => {
-  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-tech');
+  const forestImage = PlaceHolderImages.find(img => img.id === 'hero-forest');
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 overflow-hidden">
@@ -58,7 +59,7 @@ export const Hero: React.FC = () => {
             <div className="flex items-center gap-4">
               <SocialIcon href="https://github.com/mohanbaragi009" icon={<Github size={20} />} />
               <SocialIcon href="https://linkedin.com/in/mohan-baragi" icon={<Linkedin size={20} />} />
-              <SocialIcon href="https://www.instagram.com/_mohanreddy_009/" icon={<ExternalLink size={20} />} />
+              <SocialIcon href="https://www.instagram.com/_mohanreddy_009/" icon={<Instagram size={20} />} />
             </div>
           </div>
         </motion.div>
@@ -73,7 +74,7 @@ export const Hero: React.FC = () => {
           <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full -z-10 animate-pulse" />
           <div className="relative h-full w-full rounded-[4rem] overflow-hidden border border-white/10 group">
             <Image
-              src="https://picsum.photos/seed/forest/800/800"
+              src={forestImage?.imageUrl || "https://picsum.photos/seed/forest/800/800"}
               alt="Portrait of Mohan Baragi"
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-1000 grayscale-[0.2] contrast-[1.1]"
