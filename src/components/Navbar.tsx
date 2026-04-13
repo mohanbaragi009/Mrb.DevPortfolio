@@ -28,16 +28,16 @@ export const Navbar: React.FC = () => {
       <header
         className={cn(
           "fixed top-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-7xl",
-          "px-8 py-4 rounded-full border border-white/[0.05]",
-          "bg-white/[0.02] backdrop-blur-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]",
-          isScrolled ? "top-4 py-3 bg-[#0a0a0a]/80" : "top-8"
+          "px-8 py-4 rounded-full border border-white/40",
+          "bg-white/40 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]",
+          isScrolled ? "top-4 py-3 bg-white/60" : "top-8"
         )}
       >
         <div className="flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-headline font-bold tracking-tighter cursor-pointer flex items-center group ml-4"
+            className="text-2xl font-headline font-bold tracking-tighter cursor-pointer flex items-center group ml-4 text-zinc-950"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             Mohan<span className="text-primary group-hover:animate-pulse">.</span>
@@ -48,7 +48,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-[10px] font-bold tracking-[0.3em] text-muted-foreground hover:text-white transition-all duration-300 relative group"
+                className="text-[10px] font-bold tracking-[0.3em] text-zinc-600 hover:text-black transition-all duration-300 relative group"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full" />
@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
             </Button>
           </div>
 
-          <button className="md:hidden text-white p-2" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden text-zinc-950 p-2" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -74,14 +74,14 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
             animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-            className="fixed inset-0 z-[60] md:hidden bg-black/95 flex flex-col items-center justify-center p-8 gap-10"
+            className="fixed inset-0 z-[60] md:hidden bg-white/95 flex flex-col items-center justify-center p-8 gap-10"
           >
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-4xl font-headline font-bold tracking-widest hover:text-primary transition-all duration-300"
+                className="text-4xl font-headline font-bold tracking-widest text-zinc-900 hover:text-primary transition-all duration-300"
               >
                 {link.name}
               </a>

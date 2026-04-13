@@ -16,13 +16,13 @@ export const AnimatedBackground: React.FC = () => {
       <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-purple-500/10 blur-[180px] rounded-full animate-pulse" style={{ animationDuration: '12s' }} />
       
       {/* Prominent Central White Glow - "More White in Background" */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[50%] bg-white/[0.04] blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[80%] bg-white/[0.08] blur-[200px] rounded-full pointer-events-none" />
       
       {/* Top White Soft Light */}
-      <div className="absolute top-0 left-0 w-full h-[30%] bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-[45%] bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none" />
 
       {/* Subtle Bottom Light */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[25%] bg-gradient-to-t from-white/[0.05] to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[30%] bg-gradient-to-t from-white/[0.07] to-transparent pointer-events-none" />
       
       {/* Interactive Light Dots */}
       <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/20 rounded-full blur-[2px] animate-pulse" />
