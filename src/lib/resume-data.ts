@@ -47,86 +47,67 @@ export const resumeData = {
   projects: [
     {
       title: "AI Powered Resume Analyzer",
-      stack: "React JS, Node.js, Express.js, MongoDB, Google Gemini",
-      bullets: [
-        "Developed an AI-powered Full Stack application matching resumes using the Gemini API.",
-        "Implemented an ATS scoring algorithm to measure resume relevance and identify missing skills.",
-        "Generated AI-based improvement suggestions to enhance resume quality and job-match probability."
-      ],
+      description: "Intelligent career tool evaluating resumes against JDs using advanced NLP for scoring. Highly accurate parsing and recommendation engine.",
+      stack: "Python, Machine Learning, NLP",
+      image: "https://picsum.photos/seed/resume-ai/800/600",
+      isLive: true,
       links: [
-        "https://github.com/mohanbaragi009",
-        "https://v0-mohan-ai-resume-analyzer.vercel.app/"
+        { type: "code", url: "https://github.com/mohanbaragi009" },
+        { type: "launch", url: "https://v0-mohan-ai-resume-analyzer.vercel.app/" }
       ]
     },
     {
       title: "Golf Charity Subscription",
-      stack: "React, Tailwind CSS, Vercel, Node.js",
-      bullets: [
-        "Architected a subscription-based platform for golf charity events and community engagement.",
-        "Streamlined the registration and payment process for tournament participants.",
-        "Optimized frontend performance for a seamless user subscription journey."
-      ],
-      links: ["https://golf-charity-subscription-ten.vercel.app/"]
+      description: "Membership management platform for golf clubs featuring tiered subscriptions, secure payments, and charity tracking.",
+      stack: "React, Node.js, Express",
+      image: "https://picsum.photos/seed/golf/800/600",
+      isLive: true,
+      links: [
+        { type: "code", url: "https://github.com/mohanbaragi009" },
+        { type: "launch", url: "https://golf-charity-subscription-ten.vercel.app/" }
+      ]
+    },
+    {
+      title: "Vehicle-to-Vehicle Communication Using LoRa",
+      description: "Wireless communication system for vehicles using LoRa technology to enable real-time data exchange for safety and traffic coordination.",
+      stack: "LoRa, Embedded Systems, IoT",
+      image: "https://picsum.photos/seed/lora/800/600",
+      isLive: false,
+      links: [
+        { type: "code", url: "https://github.com/mohanbaragi009" }
+      ]
     },
     {
       title: "Wikipedia Search Application",
-      stack: "HTML, CSS, JS, Wikipedia API",
-      bullets: [
-        "Built a dynamic search engine leveraging the Wikipedia API for real-time information retrieval.",
-        "Implemented custom UI filters and responsive layout for seamless cross-device browsing.",
-        "Optimized API calling frequency to ensure smooth user experience and low latency."
-      ],
-      links: ["https://mohanbaragi009.github.io/Wikipedia-Search-App/"]
-    },
-    {
-      title: "Vehicle to Vehicle Communication (LoRa)",
-      stack: "LoRa, Arduino, ESP32, Embedded C++, Python",
-      bullets: [
-        "Implemented a low-power wide-area network (LPWAN) protocol for vehicle-to-vehicle data exchange.",
-        "Optimized transmission latency and reliability for safety-critical communications.",
-        "Developed a robust messaging system capable of long-range telemetry transmission."
-      ],
-      links: ["https://github.com/mohanbaragi009"]
-    },
-    {
-      title: "mcp-learning-path-ChatBot",
-      stack: "Python, GenAI, LangChain, OpenAI API",
-      bullets: [
-        "Engineered an AI chatbot designed to generate personalized learning paths for students.",
-        "Utilized modern LLM orchestration frameworks to maintain context and intent throughout conversations.",
-        "Focused on data science and software engineering roadmap generation."
-      ],
-      links: ["https://github.com/mohanbaragi009"]
-    },
-    {
-      title: "Loan-Approval-Prediction-System",
-      stack: "Python, Flask, Scikit-learn, Machine Learning",
-      bullets: [
-        "Developed a web application for predicting loan approval status based on user input features.",
-        "Trained multiple ML models (Random Forest, Logistic Regression) to find the most accurate prediction engine.",
-        "Deployed the model using a Flask backend for real-time inference capability."
-      ],
-      links: ["https://github.com/mohanbaragi009"]
+      description: "Built a dynamic search engine leveraging the Wikipedia API for real-time information retrieval with custom UI filters.",
+      stack: "HTML, CSS, JS",
+      image: "https://picsum.photos/seed/wiki/800/600",
+      isLive: true,
+      links: [
+        { type: "code", url: "https://mohanbaragi009.github.io/Wikipedia-Search-App/" },
+        { type: "launch", url: "https://mohanbaragi009.github.io/Wikipedia-Search-App/" }
+      ]
     },
     {
       title: "BookMyShow Clone",
-      stack: "React, Node.js, MongoDB, Tailwind CSS",
-      bullets: [
-        "Architected a scalable movie booking platform with real-time seat selection and availability.",
-        "Integrated secure authentication and a mock payment gateway for a complete user journey.",
-        "Focused on high-performance image rendering and state management."
-      ],
-      links: ["https://github.com/mohanbaragi009"]
+      description: "Scalable movie booking platform with real-time seat selection, secure auth, and high-performance state management.",
+      stack: "React, Node.js, MongoDB",
+      image: "https://picsum.photos/seed/movies/800/600",
+      isLive: true,
+      links: [
+        { type: "code", url: "https://github.com/mohanbaragi009" }
+      ]
     },
     {
       title: "Food Munch",
+      description: "Fully responsive food ordering website with structured menus, high-quality displays, and Bootstrap engagement features.",
       stack: "HTML, CSS, Bootstrap",
-      bullets: [
-        "Developed a fully responsive food ordering website offering a comprehensive list of items with detailed descriptions.",
-        "Enhanced user experience with structured HTML elements and modern Bootstrap components.",
-        "Implemented high-quality product displays and engagement features."
-      ],
-      links: ["https://mohanbaragi009.github.io/Food-munch/"]
+      image: "https://picsum.photos/seed/food/800/600",
+      isLive: true,
+      links: [
+        { type: "code", url: "https://mohanbaragi009.github.io/Food-munch/" },
+        { type: "launch", url: "https://mohanbaragi009.github.io/Food-munch/" }
+      ]
     }
   ],
   skills: [
