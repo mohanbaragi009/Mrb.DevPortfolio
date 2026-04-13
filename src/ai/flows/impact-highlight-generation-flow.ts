@@ -13,7 +13,7 @@ import {z} from 'genkit';
 // Input Schema: Defines the structure of the resume data relevant for impact analysis.
 const ResumeBasicSchema = z.object({
   summary: z.string().describe('A concise professional summary.')
-}).optional(); // Mark as optional to handle cases where basic summary might not be present or directly relevant.
+}).optional();
 
 const ResumeExperienceItemSchema = z.object({
   company: z.string().describe('The name of the company.'),
@@ -32,7 +32,7 @@ const ResumeProjectItemSchema = z.object({
   bullets: z.array(z.string()).describe('Key features, technologies, and impact of the project.')
 });
 
-export const ImpactHighlightInputSchema = z.object({
+const ImpactHighlightInputSchema = z.object({
   basics: ResumeBasicSchema.describe('Basic information including the professional summary.').optional(),
   experience: z.array(ResumeExperienceItemSchema).describe('Professional work experience, with details for each role.').optional(),
   achievements: z.array(ResumeAchievementItemSchema).describe('Specific individual achievements with measurable outcomes.').optional(),
@@ -42,10 +42,10 @@ export const ImpactHighlightInputSchema = z.object({
 export type ImpactHighlightInput = z.infer<typeof ImpactHighlightInputSchema>;
 
 // Output Schema: Defines the structure for the extracted impact highlights.
-export const ImpactHighlightOutputSchema = z.object({
+const ImpactHighlightOutputSchema = z.object({
   highlights: z.array(z.object({
     title: z.string().describe('A concise title for the impact highlight.'),
-    description: z.string().describe('A detailed description of the impact, focusing on measurable achievements and key contributions, potentially rephrased or summarized for clarity.').nullable() // Allow nullable if LLM can't always provide.
+    description: z.string().describe('A detailed description of the impact, focusing on measurable achievements and key contributions, potentially rephrased or summarized for clarity.').nullable()
   })).describe('A list of the most impactful achievements and key contributions from the resume, rephrased for conciseness and impact.'),
   top3Impact: z.array(z.string()).describe('The top 3 most impactful statements, directly extracted verbatim from the resume data without alteration or summarization.')
 });
@@ -69,7 +69,7 @@ const impactHighlightGenerationFlow = ai.defineFlow(
   },
   async (input) => {
     const {output} = await impactHighlightPrompt(input);
-    return output!; // The prompt output should match the flow output schema.
+    return output!;
   }
 );
 
