@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -63,7 +62,7 @@ export const Contact: React.FC = () => {
             <div className="flex flex-wrap gap-4">
               <SocialItem href="https://github.com/mohanbaragi009" icon={<Github size={20} />} />
               <SocialItem href="https://linkedin.com/in/mohan-baragi" icon={<Linkedin size={20} />} />
-              <SocialItem href="https://leetcode.com/mohanbaragi009" icon={<LeetCodeIcon />} />
+              <SocialItem href="https://leetcode.com/u/mohanbaragi_009/" icon={<LeetCodeIcon />} />
               <SocialItem href="https://www.instagram.com/_mohanreddy_009/" icon={<Instagram size={20} />} />
             </div>
           </div>

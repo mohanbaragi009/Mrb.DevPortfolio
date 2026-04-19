@@ -1,4 +1,3 @@
-
 export const resumeData = {
   basics: {
     name: "Mohan Baragi",
@@ -10,7 +9,7 @@ export const resumeData = {
     links: [
       "https://linkedin.com/in/mohan-baragi",
       "https://github.com/mohanbaragi009",
-      "https://leetcode.com/mohanbaragi009",
+      "https://leetcode.com/u/mohanbaragi_009/",
       "https://www.instagram.com/_mohanreddy_009/"
     ]
   },

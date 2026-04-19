@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -88,7 +87,7 @@ export const Hero: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4">
               <SocialIcon href="https://github.com/mohanbaragi009" icon={<Github size={22} />} />
               <SocialIcon href="https://linkedin.com/in/mohan-baragi" icon={<Linkedin size={22} />} />
-              <SocialIcon href="https://leetcode.com/mohanbaragi009" icon={<LeetCodeIcon />} />
+              <SocialIcon href="https://leetcode.com/u/mohanbaragi_009/" icon={<LeetCodeIcon />} />
               <SocialIcon href="https://www.instagram.com/_mohanreddy_009/" icon={<Instagram size={22} />} />
             </div>
           </motion.div>
