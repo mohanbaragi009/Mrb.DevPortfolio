@@ -78,6 +78,16 @@ export const resumeData = {
       ]
     },
     {
+      title: "AI Mock Interview",
+      description: "A comprehensive MERN stack platform that simulates real-world technical interviews using AI. It provides dynamic question generation and real-time constructive feedback to help users prepare effectively.",
+      stack: "MERN Stack, MongoDB Atlas, Gen AI",
+      image: "https://picsum.photos/seed/mock-interview/800/600",
+      isLive: false,
+      links: [
+        { type: "code", url: "https://github.com/mohanbaragi009/AI_Mock_Interview" }
+      ]
+    },
+    {
       title: "Golf Charity Subscription",
       description: "Membership management platform for golf clubs featuring tiered subscriptions, secure payments, and charity tracking.",
       stack: "React, Node.js, Express",
@@ -96,17 +106,6 @@ export const resumeData = {
       isLive: false,
       links: [
         { type: "code", url: "https://github.com/mohanbaragi009" }
-      ]
-    },
-    {
-      title: "Wikipedia Search Application",
-      description: "Built a dynamic search engine leveraging the Wikipedia API for real-center information retrieval with custom UI filters.",
-      stack: "HTML, CSS, JS",
-      image: "https://picsum.photos/seed/wiki/800/600",
-      isLive: true,
-      links: [
-        { type: "code", url: "https://mohanbaragi009.github.io/Wikipedia-Search-App/" },
-        { type: "launch", url: "https://mohanbaragi009.github.io/Wikipedia-Search-App/" }
       ]
     },
     {
