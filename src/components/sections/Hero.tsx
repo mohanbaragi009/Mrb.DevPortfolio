@@ -1,7 +1,8 @@
+
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ChevronRight, Github, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { resumeData } from '@/lib/resume-data';
@@ -16,6 +17,35 @@ const LeetCodeIcon = () => (
 
 export const Hero: React.FC = () => {
   const classicCarImage = PlaceHolderImages.find(img => img.id === 'hero-classic-car');
+  
+  // 3D Tilt Values
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+  
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+    
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-40 pb-32 px-6 overflow-hidden">
@@ -93,15 +123,26 @@ export const Hero: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right Column: Hero Image */}
+        {/* Right Column: Hero Image with 3D Tilt */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-          className="relative lg:col-span-5 w-full max-w-[550px] mx-auto lg:ml-auto"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          style={{
+            rotateX,
+            rotateY,
+            transformStyle: "preserve-3d",
+            perspective: "1000px"
+          }}
+          className="relative lg:col-span-5 w-full max-w-[550px] mx-auto lg:ml-auto cursor-pointer"
         >
           <div className="absolute inset-0 bg-primary/10 blur-[150px] rounded-full -z-10 animate-float" />
-          <div className="relative aspect-[4/5] w-full rounded-[5rem] overflow-hidden border border-white/[0.08] group bg-[#0a0a0a]">
+          <div 
+            style={{ transform: "translateZ(50px)" }}
+            className="relative aspect-[4/5] w-full rounded-[5rem] overflow-hidden border border-white/[0.08] group bg-[#0a0a0a] shadow-2xl"
+          >
             <Image
               src={classicCarImage?.imageUrl || "https://picsum.photos/seed/classic-car/800/800"}
               alt="Mohan Baragi Portfolio"
@@ -112,8 +153,11 @@ export const Hero: React.FC = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60" />
             
-            {/* Overlay Info Card */}
-            <div className="absolute bottom-10 left-10 right-10 p-10 glass rounded-[3rem] translate-y-4 group-hover:translate-y-0 transition-all duration-700">
+            {/* Overlay Info Card with deeper 3D level */}
+            <div 
+              style={{ transform: "translateZ(80px)" }}
+              className="absolute bottom-10 left-10 right-10 p-10 glass rounded-[3rem] translate-y-4 group-hover:translate-y-0 transition-all duration-700"
+            >
               <div className="flex flex-col gap-2">
                 <p className="text-[10px] font-bold tracking-[0.4em] text-primary uppercase">CURRENT FOCUS</p>
                 <h4 className="text-2xl font-headline font-bold tracking-tight text-white leading-tight">

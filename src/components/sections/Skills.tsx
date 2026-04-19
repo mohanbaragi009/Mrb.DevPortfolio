@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -39,10 +40,12 @@ export const Skills: React.FC = () => {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, rotateX: 20 }}
+            whileInView={{ opacity: 1, rotateX: 0 }}
             viewport={{ once: true }}
-            className="glass p-12 rounded-[3.5rem] space-y-8 relative group overflow-hidden mt-16 lg:mt-0"
+            whileHover={{ scale: 1.02, rotateY: 5 }}
+            className="glass p-12 rounded-[3.5rem] space-y-8 relative group overflow-hidden mt-16 lg:mt-0 shadow-2xl"
+            style={{ perspective: "1000px" }}
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl -mr-16 -mt-16 group-hover:bg-primary/20 transition-all duration-700" />
             <div className="flex items-center gap-5 text-primary">
@@ -65,11 +68,13 @@ export const Skills: React.FC = () => {
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, rotateX: 10 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.8 }}
-                className="bg-[#111111]/80 backdrop-blur-md p-10 rounded-[3.5rem] border border-white/5 flex flex-col justify-between group hover:border-primary/30 transition-all duration-700 hover:-translate-y-2 shadow-2xl"
+                whileHover={{ y: -10, rotateY: -3, scale: 1.02 }}
+                className="bg-[#111111]/80 backdrop-blur-md p-10 rounded-[3.5rem] border border-white/5 flex flex-col justify-between group hover:border-primary/30 transition-all duration-700 shadow-2xl"
+                style={{ perspective: "1000px" }}
               >
                 <div>
                   <div className="flex items-center gap-6 mb-10">
