@@ -57,8 +57,8 @@ export const Navbar: React.FC = () => {
           </nav>
 
           <div className="hidden md:block mr-2">
-            <Button className="btn-gradient rounded-full px-10 py-6 font-bold tracking-[0.2em] text-[10px] uppercase shadow-xl shadow-primary/20">
-              Let's Talk
+            <Button asChild className="btn-gradient rounded-full px-10 py-6 font-bold tracking-[0.2em] text-[10px] uppercase shadow-xl shadow-primary/20 border-none">
+              <a href="#contact">Let's Talk</a>
             </Button>
           </div>
 
@@ -86,8 +86,8 @@ export const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="btn-gradient rounded-full px-12 py-9 text-xl font-bold w-full max-w-xs mt-6" onClick={() => setIsOpen(false)}>
-              Let's Talk
+            <Button asChild className="btn-gradient rounded-full px-12 py-9 text-xl font-bold w-full max-w-xs mt-6 border-none" onClick={() => setIsOpen(false)}>
+              <a href="#contact">Let's Talk</a>
             </Button>
           </motion.div>
         )}
