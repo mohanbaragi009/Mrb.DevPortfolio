@@ -62,7 +62,7 @@ export const resumeData = {
       context: "Participated in a State-Level Buildathon conducted by OpenAI X NxtWave."
     },
     {
-      measurableItem: "8.26 CGPA",
+      measurableItem: "8.45 CGPA",
       context: "Maintained a consistently strong academic record at AMC Engineering College, demonstrating excellence in CSE and Data Science."
     }
   ],
@@ -159,7 +159,7 @@ export const resumeData = {
       institution: "AMC Engineering College",
       dates: "2022 — 2026",
       location: "Bengaluru, Karnataka",
-      details: ["CGPA: 8.26", "Specialization: Computer Science Engineering & Data Science"]
+      details: ["CGPA: 8.45", "Specialization: Computer Science Engineering & Data Science"]
     },
     {
       degree: "Pre-University Education (12th Grade)",
