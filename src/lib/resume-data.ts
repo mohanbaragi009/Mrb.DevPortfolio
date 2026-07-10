@@ -110,13 +110,14 @@ export const resumeData = {
       ]
     },
     {
-      title: "Vehicle-to-Vehicle Communication Using LoRa",
-      description: "Wireless communication system for vehicles using LoRa technology to enable real-time data exchange for safety and traffic coordination.",
-      stack: "LoRa, Embedded Systems, IoT",
-      image: "https://picsum.photos/seed/lora/800/600",
-      isLive: false,
+      title: "BookMyShow Project",
+      description: "A comprehensive movie ticket booking platform clone featuring seat selection, movie listings, and a seamless user interface for entertainment enthusiasts.",
+      stack: "React, Tailwind, Node.js",
+      image: "https://picsum.photos/seed/bookmyshow/800/600",
+      isLive: true,
       links: [
-        { type: "code", url: "https://github.com/mohanbaragi009" }
+        { type: "code", url: "https://github.com/mohanbaragi009" },
+        { type: "launch", url: "https://mohanrbbookmyshow.lovable.app/" }
       ]
     },
     {
