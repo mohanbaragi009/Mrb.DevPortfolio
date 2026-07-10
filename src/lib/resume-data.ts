@@ -2,7 +2,7 @@ export const resumeData = {
   basics: {
     name: "Mohan Baragi",
     title: "Software & MERN Stack Developer",
-    summary: "Software and MERN Stack Developer specializing in Data Science. Eagerly waiting for the opportunity to learn and impact from day one. Hungry to learn new technologies and implement them in the real world with a simple and effective approach.",
+    summary: "Software & MERN Stack Developer specializing in Data Science. Eagerly waiting for the opportunity to learn and impact from day one. Hungry to learn new technologies and implement them in the real world with a simple and effective approach.",
     location: "Bengaluru, Karnataka",
     email: "mohanreddy00240@gmail.com",
     phone: "+91-8296783608",
@@ -52,7 +52,7 @@ export const resumeData = {
     },
     {
       measurableItem: "8.26 CGPA",
-      context: "Maintained a strong academic record at AMC Engineering College in CSE and Data Science."
+      context: "Maintained a consistently strong academic record at AMC Engineering College, demonstrating excellence in CSE and Data Science."
     }
   ],
   projects: [
