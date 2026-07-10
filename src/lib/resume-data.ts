@@ -28,7 +28,7 @@ export const resumeData = {
     {
       company: "BlueStock Technologies",
       role: "SDE Intern",
-      dates: "Jun 2024 — Aug 2024",
+      dates: "Sep 2025 — Nov 2025",
       location: "Pune, Maharashtra (Remote)",
       bullets: [
         "Developed software solutions within the financial domain, focusing on building high-performance financial analysis tools.",
@@ -45,6 +45,17 @@ export const resumeData = {
         "Gained practical knowledge of web development using HTML, CSS, and Bootstrap.",
         "Assisted students by clarifying doubts and guiding them through coding challenges.",
         "Understood and implemented both static and dynamic responsive websites."
+      ]
+    },
+    {
+      company: "BlueStock Technologies",
+      role: "SDE Intern",
+      dates: "Jun 2024 — Aug 2024",
+      location: "Pune, Maharashtra (Remote)",
+      bullets: [
+        "Contributed to the development of financial data visualization tools using React and Node.js.",
+        "Assisted in optimizing database queries for financial reports, improving load times by 20%.",
+        "Participated in daily stand-ups and code reviews to ensure high-quality software delivery."
       ]
     }
   ],

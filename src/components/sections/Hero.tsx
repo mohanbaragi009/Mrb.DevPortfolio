@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -94,7 +93,7 @@ export const Hero: React.FC = () => {
             className="text-xl md:text-2xl text-muted-foreground/80 mb-14 max-w-xl leading-relaxed font-light"
           >
             Software & MERN Stack Developer specializing in <span className="text-white font-medium">Data Science</span>. <br />
-            Eager to learn, impact, and implement new technologies in the real world from day one.
+            Eager to learn and impact from day one, with a focus on simple and effective technologies.
           </motion.p>
 
           <motion.div 
