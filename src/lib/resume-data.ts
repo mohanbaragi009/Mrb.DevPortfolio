@@ -2,7 +2,7 @@ export const resumeData = {
   basics: {
     name: "Mohan Baragi",
     title: "Software & MERN Stack Developer",
-    summary: "Software & MERN Stack Developer specializing in Data Science. Eagerly waiting for the opportunity to learn and impact from day one. Hungry to learn new technologies and implement them in the real world with a simple and effective approach.",
+    summary: "Software Developer & MERN Stack Developer specializing in Data Science. Eagerly waiting for the opportunity to learn and impact from day one. Hungry to learn new technologies and implement them in the real world with a simple and effective approach.",
     location: "Bengaluru, Karnataka",
     email: "mohanreddy00240@gmail.com",
     phone: "+91-8296783608",
@@ -23,6 +23,17 @@ export const resumeData = {
         "Optimized full-stack applications using Java, React, HTML, and CSS, resulting in improved system scalability.",
         "Increased system efficiency by building RESTful APIs and optimizing MySQL queries, significantly enhancing overall performance.",
         "Integrated Generative AI features and responsive UI components to improve user experience and platform functionality."
+      ]
+    },
+    {
+      company: "BlueStock Technologies",
+      role: "SDE Intern",
+      dates: "Jun 2024 — Aug 2024",
+      location: "Pune, Maharashtra (Remote)",
+      bullets: [
+        "Developed software solutions within the financial domain, focusing on building high-performance financial analysis tools.",
+        "Implemented secure data handling protocols for financial field software development, ensuring data integrity and reliability.",
+        "Collaborated on designing scalable backend systems to support real-time financial data processing and user-centric features."
       ]
     },
     {
