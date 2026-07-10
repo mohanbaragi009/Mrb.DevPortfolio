@@ -1,13 +1,28 @@
+
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Github, Linkedin, Instagram, Send } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, Instagram, Send, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { resumeData } from '@/lib/resume-data';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+import { useToast } from '@/hooks/use-toast';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+
+const contactFormSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  subject: z.string().min(5, { message: "Subject must be at least 5 characters." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const LeetCodeIcon = () => (
   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -16,6 +31,33 @@ const LeetCodeIcon = () => (
 );
 
 export const Contact: React.FC = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (data: ContactFormValues) => {
+    setIsSubmitting(true);
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    
+    toast({
+      title: "Message Initiated!",
+      description: `Thanks for reaching out, ${data.name.split(' ')[0]}! I'll get back to you soon.`,
+    });
+    
+    form.reset();
+    setIsSubmitting(false);
+  };
+
   return (
     <section id="contact" className="py-32 px-6 max-w-7xl mx-auto">
       <div className="bg-[#050505] rounded-[4rem] overflow-hidden border border-white/[0.05] shadow-2xl flex flex-col lg:flex-row min-h-[800px]">
@@ -70,35 +112,85 @@ export const Contact: React.FC = () => {
 
         {/* Right Panel: Form (Grey-White) */}
         <div className="lg:w-3/5 bg-[#f8f9fa] p-12 md:p-16 flex flex-col justify-center text-zinc-950">
-          <form className="space-y-10" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div className="space-y-4">
-                <label className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">FULL NAME</label>
-                <Input placeholder="Your Name" className="h-16 bg-white border-zinc-200 text-zinc-900 rounded-2xl px-6 focus:border-[#8b5cf6]/50 transition-all placeholder:text-zinc-300" />
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem className="space-y-4">
+                      <FormLabel className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">FULL NAME</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your Name" {...field} className="h-16 bg-white border-zinc-200 text-zinc-900 rounded-2xl px-6 focus:border-[#8b5cf6]/50 transition-all placeholder:text-zinc-300" />
+                      </FormControl>
+                      <FormMessage className="text-xs" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="space-y-4">
+                      <FormLabel className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">EMAIL PROTOCOL</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="email@example.com" {...field} className="h-16 bg-white border-zinc-200 text-zinc-900 rounded-2xl px-6 focus:border-[#8b5cf6]/50 transition-all placeholder:text-zinc-300" />
+                      </FormControl>
+                      <FormMessage className="text-xs" />
+                    </FormItem>
+                  )}
+                />
               </div>
-              <div className="space-y-4">
-                <label className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">EMAIL PROTOCOL</label>
-                <Input type="email" placeholder="email@example.com" className="h-16 bg-white border-zinc-200 text-zinc-900 rounded-2xl px-6 focus:border-[#8b5cf6]/50 transition-all placeholder:text-zinc-300" />
+
+              <FormField
+                control={form.control}
+                name="subject"
+                render={({ field }) => (
+                  <FormItem className="space-y-4">
+                    <FormLabel className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">SUBJECT</FormLabel>
+                    <FormControl>
+                      <Input placeholder="How can I help you?" {...field} className="h-16 bg-white border-zinc-200 text-zinc-900 rounded-2xl px-6 focus:border-[#8b5cf6]/50 transition-all placeholder:text-zinc-300" />
+                    </FormControl>
+                    <FormMessage className="text-xs" />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem className="space-y-4">
+                    <FormLabel className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">YOUR MESSAGE</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="Describe your project vision..." {...field} className="min-h-[220px] bg-white border-zinc-200 text-zinc-900 rounded-[2rem] p-6 focus:border-[#8b5cf6]/50 transition-all resize-none placeholder:text-zinc-300" />
+                    </FormControl>
+                    <FormMessage className="text-xs" />
+                  </FormItem>
+                )}
+              />
+
+              <div className="pt-6">
+                <Button 
+                  disabled={isSubmitting}
+                  className="bg-[#8b5cf6] hover:bg-[#7c3aed] text-white rounded-full h-20 px-12 text-sm font-bold tracking-[0.2em] group shadow-[0_10px_40px_rgba(139,92,246,0.4)] w-fit disabled:opacity-70"
+                >
+                  {isSubmitting ? (
+                    <>
+                      TRANSMITTING...
+                      <Loader2 size={18} className="ml-3 animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      INITIATE CONTACT
+                      <Send size={18} className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </>
+                  )}
+                </Button>
               </div>
-            </div>
-
-            <div className="space-y-4">
-              <label className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">SUBJECT</label>
-              <Input placeholder="How can I help you?" className="h-16 bg-white border-zinc-200 text-zinc-900 rounded-2xl px-6 focus:border-[#8b5cf6]/50 transition-all placeholder:text-zinc-300" />
-            </div>
-
-            <div className="space-y-4">
-              <label className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase ml-1">YOUR MESSAGE</label>
-              <Textarea placeholder="Describe your project vision..." className="min-h-[220px] bg-white border-zinc-200 text-zinc-900 rounded-[2rem] p-6 focus:border-[#8b5cf6]/50 transition-all resize-none placeholder:text-zinc-300" />
-            </div>
-
-            <div className="pt-6">
-              <Button className="bg-[#8b5cf6] hover:bg-[#7c3aed] text-white rounded-full h-20 px-12 text-sm font-bold tracking-[0.2em] group shadow-[0_10px_40px_rgba(139,92,246,0.4)] w-fit">
-                INITIATE CONTACT
-                <Send size={18} className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </Button>
-            </div>
-          </form>
+            </form>
+          </Form>
         </div>
       </div>
     </section>
