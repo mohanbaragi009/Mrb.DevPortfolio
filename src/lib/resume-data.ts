@@ -127,7 +127,7 @@ export const resumeData = {
       isLive: true,
       links: [
         { type: "code", url: "https://mohanbaragi009.github.io/Food-munch/" },
-        { type: "launch", url: "https://mohanbaragi009.github.io/Food-munch/" }
+        { type: "launch", url: "https://mohanbaragi009.github.io/ReciepeHQ-Management-System/" }
       ]
     }
   ],
